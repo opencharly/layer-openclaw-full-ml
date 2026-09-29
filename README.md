@@ -34,7 +34,6 @@ Compose the metalayer in a box's `candy:` list:
 ```yaml
 openclaw-full-ml:
   candy:
-    # the named box's value is the box BODY; `base:` and the `candy:` list are its keys
     base: cachyos
     candy:
       - '@github.com/opencharly/layer-openclaw-full-ml:v2026.239.1611'
