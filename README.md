@@ -29,7 +29,7 @@ candies, so the observable effect is the union of their key artifacts:
 
 ## How to use it
 
-Compose the metalayer in a box's `candy:` list:
+Compose the metalayer inside a box body (the box name's `candy:` node is the box body, whose keys are `base:` and a `candy:` list):
 
 ```yaml
 openclaw-full-ml:
