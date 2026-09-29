@@ -51,6 +51,8 @@ composition fails every check.
 
 ## Related
 
+- Closest family skill: `/charly-openclaw:openclaw-full-ml-layer` — the nearest owning procedure; this
+  repo carries no `skill:` entity of its own.
 - Base composition: `/charly-openclaw:openclaw-full`.
 - STT: `/charly-tools:whisper`. TTS: `/charly-tools:sherpa-onnx`.
 - [`opencharly/opencharly](https://github.com/opencharly/opencharly) — the umbrella.
