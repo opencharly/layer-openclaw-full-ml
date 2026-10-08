@@ -2,7 +2,7 @@
 #
 #  This repo's only entity was the `openclaw-full-ml:` metalayer, which composed
 #  openclaw-full + whisper + sherpa-onnx. The OpenClaw family was consolidated
-#  into opencharly/openclaw (opencharly/opencharly#431) and the variant
+#  into opencharly/layer-openclaw (opencharly/opencharly#431) and the variant
 #  metalayers were DROPPED rather than moved: the family ships the gateway and its
 #  layer, and no `-full`, `-desktop` or `-ml` variant returns.
 #
