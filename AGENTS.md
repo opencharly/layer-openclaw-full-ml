@@ -1,54 +1,14 @@
 # AGENTS.md — layer-openclaw-full-ml
 
-Standalone candy repo for the `openclaw-full-ml` meta-composition layer — the
-OpenClaw full headless stack plus the CUDA speech-ML tools (Whisper STT +
-sherpa-onnx TTS). The candy lives in `charly.yml` at the repo root: the composed
-`candy:` list and the `plan:` `check:` assertions.
+**This repo is retired.** It owns no entities any more: its `openclaw-full-ml`
+metalayer was dropped when the OpenClaw family was consolidated into
+`opencharly/openclaw` (opencharly/opencharly#431). The family's gateway image and
+its layer live there, and no `-full`, `-desktop` or `-ml` variant returns.
 
-This repo's candy carries **no `skill:` entity**, so this repo projects no
-owning skill. The family skill `/charly-openclaw:openclaw-full-ml-layer` (owned
-by `opencharly/layer-charly-openclaw`) is the closest procedure, and the gap is
-recorded against `opencharly/opencharly#291` (the batch that authors missing
-`skill:` entities).
+Do not add entities here, and do not compose this repo — it is kept only until the
+operator archives it. A change that belongs to the OpenClaw family belongs in
+`opencharly/openclaw` instead.
 
-Canonical files:
-
-- `charly.yml` — the `openclaw-full-ml:` candy entity.
-- `.github/workflows/tag-on-merge.yml` — CalVer tag + `CHANGELOG/` on merge.
-- `README.md` — user overview only; never agent guidance.
-
-## Load these skills first (R0)
-
-- `/charly-openclaw:openclaw-full-ml-layer` — the owning skill projected for the
-  base OpenClaw full + ML stack (family `openclaw`). Load before editing or
-  troubleshooting.
-- `/charly-openclaw:openclaw-full` — the base composition this metalayer extends.
-- `/charly-tools:whisper` and `/charly-tools:sherpa-onnx` — the speech-ML
-  candies composed here.
-- `/charly-image:layer` — the candy authoring reference (`charly.yml` schema,
-  `plan:` step verbs incl. `check:`, the `candy:` composition list, and service
-  declarations). Load before editing any entity field or plan step.
-
-## Build / validate / test
-
-- The merge gate is the **org-wide** `charly/pr-validator` (required check
-  `validate / validate`, defined in `opencharly/.github`); this repo has **no
-  per-repo candy gate** and ships only `.github/workflows/tag-on-merge.yml`.
-- The candy's `plan:` `check:` steps assert each composed branch's landed
-  artifact (gateway binary, ffmpeg, rg, the whisper script, the sherpa model
-  directory) — a no-op composition fails every check.
-
-## Modify this repo
-
-- There is no `skill:` entity to keep in sync; if one is added (per #291), it
-  must be edited together with the candy entity in the same change.
-- Keep the composed `candy:` list and the per-branch checks in step.
-- Pin composed candies at merged tags only.
-- New behaviour claims belong in the `plan:` as an observable `check:` step.
-
-## Landing
-
-- The authoritative rulebook is the umbrella `AGENTS.md` in
-  `opencharly/opencharly` and `charly/AGENTS.md` in the charly repo — read it
-  before landing.
-- Release history lives in `CHANGELOG/`.
+There is no build, validate or test surface left in this repo beyond the org-wide
+`charly/pr-validator` check that every repo carries. The authoritative rulebook is
+the umbrella `AGENTS.md` in `opencharly/opencharly`.
